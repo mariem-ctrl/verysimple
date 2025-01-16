@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession Page</title>
+    <link rel="stylesheet" href="style.css"> <!-- ربط CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Clear font */
+            background-color: #000; /* Black background */
+            color: #fff; /* White text for contrast */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .content {
+            display: none; /* Hide content initially */
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent dark background */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #ff3366; /* Love pink color */
+            margin-bottom: 20px;
+        }
+
+        .message-container {
+            font-size: 1.2rem;
+            color: #fff;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .message-container p {
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            margin-top: 30px;
+            font-size: 1.1rem;
+            color: #ff3366;
+            font-weight: bold;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        .button {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin: 10px;
+            color: #fff;
+            background-color: #ff3366;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff6699;
+        }
+
+        .intro {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .intro p {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .heart {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        /* Snow effect */
+        .snowflake {
+            position: absolute;
+            color: white;
+            font-size: 1.5rem;
+            user-select: none;
+            z-index: 9999;
+            pointer-events: none;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            0% {
+                transform: translateY(-100px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Intro Section -->
+    <div class="intro">
+        <p>There is something you should know</p>
+        <button class="button" id="OkayBtn">Okay</button>
+        <button class="button" id="noBtn">No</button>
+    </div>
+
+    <!-- Confession Section -->
+    <div class="content">
+        
+        <h2>My Heartfelt Message to You</h2>
+        
+        <div class="message-container">
+            <p>
+                I’ve been meaning to express how much I appreciate you and everything you’ve done for me. Your guidance and support have meant the world to me, and I can’t thank you enough for being the amazing teacher that you are.
+            </p>
+            <p>
+                You’ve not only taught me the lessons in your subject but also valuable life lessons that I will carry with me forever. Your kindness, patience, and dedication inspire me every day. You have a unique way of making even the hardest topics seem simple, and for that, I’m truly grateful.
+            </p>
+            <p>
+                More than anything, you’ve shown me what it means to be passionate and committed to something, and I will always look up to you for that. The respect I have for you goes beyond being just my teacher — you’ve become a mentor, a role model, and a source of encouragement that I will always cherish.
+            </p>
+            <p>
+                I just wanted to take a moment to say thank you, and let you know how much I admire and appreciate you. Please know that your impact on my life has been profound, and I will forever be thankful for having you as my teacher.
+            </p>
+        </div>
+
+        <a href="index.html" class="button">Go Back to Homepage</a>
+
+        <div class="footer-text">
+            Mariem Ben Khelifa
+        </div>
+    </div>
+
+    <script>
+        const okayBtn = document.getElementById('OkayBtn');
+        const noBtn = document.getElementById('noBtn');
+        const intro = document.querySelector('.intro');
+        const content = document.querySelector('.content');
+
+        // Show confession when "Okay" is clicked
+        okayBtn.addEventListener('click', () => {
+            intro.style.display = 'none'; // Hide intro section
+            content.style.display = 'block'; // Show confession section
+        });
+
+        // Redirect to homepage when "No" is clicked
+        noBtn.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+
+</body>
+</html>

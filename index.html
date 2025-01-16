@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000; /* Keep black background */
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent dark background */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #ff3366; /* Love pink color */
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .get-started {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin: 10px;
+            color: #fff;
+            background-color: #ff3366; /* Love pink color */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-started:hover {
+            background-color: #ff3366; /* No change on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div> 
+    <div class="content">
+        <h2>Welcome!</h2>
+        <div class="button-container">
+            <button class="get-started" id="getStartedBtn">Get Started</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("getStartedBtn").addEventListener("click", function() {
+            window.location.href = "form.html"; 
+        });
+    </script>
+</body>
+</html>
